@@ -1,0 +1,264 @@
+/* ===============================
+   1. RESET BÁSICO
+=============================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ul, li, figure, figcaption, table, th, td {
+    margin: 0;
+    padding: 0;
+}
+
+/* ===============================
+   2. TIPOGRAFIA MODERNA (GOOGLE FONTS)
+=============================== */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f7f7f7;
+}
+
+/* ===============================
+   3. CORES & PALLETA
+=============================== */
+:root {
+    --cor-primaria: #e60000; /* vermelho EXAME */
+    --cor-secundaria: #222222;
+    --cor-terciaria: #ffffff;
+    --cor-destaque: #ff3300;
+    --cor-texto-secundario: #555555;
+}
+
+/* ===============================
+   4. HEADER
+=============================== */
+header {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-terciaria);
+    padding: 15px 20px;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+/* ===============================
+   5. NAV MENU
+=============================== */
+nav {
+    background-color: var(--cor-primaria);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: var(--cor-terciaria);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 5px 10px;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+    background-color: var(--cor-destaque);
+    border-radius: 5px;
+    color: var(--cor-terciaria);
+}
+
+/* ===============================
+   6. CONTAINER & LAYOUT FLEX
+=============================== */
+.container {
+    max-width: 1200px;
+    margin: 90px auto 20px auto; /* margem top ajustada pelo menu fixo */
+    padding: 0 15px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+article {
+    flex: 0 1 70%;
+    background-color: var(--cor-terciaria);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+aside {
+    flex: 0 1 28%;
+    background-color: var(--cor-terciaria);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* ===============================
+   7. CARDS
+=============================== */
+.card {
+    background-color: #fff;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.card h3 {
+    color: var(--cor-secundaria);
+    margin: 10px 0;
+}
+
+/* ===============================
+   8. TIPOGRAFIA INTERNA DO ARTIGO
+=============================== */
+article h1, article h2, article h3, article h4, article h5, article h6 {
+    margin-bottom: 12px;
+}
+
+article p {
+    margin-bottom: 15px;
+    color: var(--cor-texto-secundario);
+}
+
+strong { color: var(--cor-secundaria); }
+em { font-style: italic; }
+
+/* ===============================
+   9. FIGURE & VIDEO
+=============================== */
+figure {
+    margin: 20px 0;
+    text-align: center;
+}
+
+figcaption {
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 5px;
+}
+
+iframe {
+    width: 100%;
+    max-width: 560px;
+    height: 315px;
+    border: none;
+    border-radius: 8px;
+    display: block;
+    margin: 20px auto;
+}
+
+/* ===============================
+   10. TABELAS
+=============================== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+th, td {
+    padding: 12px 10px;
+    border: 1px solid #ccc;
+}
+
+th {
+    background-color: var(--cor-primaria);
+    color: var(--cor-terciaria);
+    text-align: left;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* ===============================
+   11. LISTAS E GLOSSÁRIO
+=============================== */
+dl {
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 6px;
+}
+
+dt { font-weight: 700; color: var(--cor-secundaria); margin-top: 10px; }
+dd { margin-left: 20px; margin-bottom: 10px; }
+
+/* ===============================
+   12. LINKS
+=============================== */
+a {
+    color: var(--cor-primaria);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--cor-destaque);
+    text-decoration: underline;
+}
+
+/* ===============================
+   13. BOTÕES
+=============================== */
+.btn {
+    background-color: var(--cor-primaria);
+    color: var(--cor-terciaria);
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: var(--cor-destaque);
+}
+
+/* ===============================
+   14. RESPONSIVIDADE
+=============================== */
+@media (max-width: 900px) {
+    .container {
+        flex-direction: column;
+        margin-top: 120px;
+    }
+
+    article, aside {
+        flex: 1 1 100%;
+    }
+}
